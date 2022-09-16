@@ -27,7 +27,7 @@ post {
     success {
         // send the success email
         echo "success"
-        mail bcc: '', body: 'Build success', cc: '', from: 'sandip123talk2me@gmail.com', replyTo: '', subject: 'Build results', to: 'sandipsahoo009@gmail.com'
+        mail bcc: '', body: 'Build success', cc: '', from: 'sandip123talk2me@gmail.com', replyTo: '', subject: "Build ID: ${BUID_ID} Job Url: ${JOB_URL} Test results: ${RUN_TESTS_DISPLAY_URL}", to: 'sandipsahoo009@gmail.com'
     } 
     unsuccessful {
         // send the error mail
