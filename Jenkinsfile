@@ -29,7 +29,7 @@ post {
         echo "success"
        mail to: 'devops@acme.com',
     subject: "Job '${JOB_NAME}' (${BUILD_NUMBER}) is waiting for input",
-    body: "Please go to ${BUILD_URL} and verify the build"
+    body: "Please go to ${BUILD_URL}  verify the build and Test results dispaly at ${RUN_TESTS_DISPLAY_URL}"
     } 
     unsuccessful {
         // send the error mail
