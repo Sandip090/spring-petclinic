@@ -27,8 +27,9 @@ post {
     success {
         // send the success email
         echo "success"
-        mail bcc: '', body: "Build success Build ID: ${BUID_ID}", cc: '', from: 'sandip123talk2me@gmail.com', replyTo: '', subject: "Job Url: ${JOB_URL} Test results: ${RUN_TESTS_DISPLAY_URL}",
-         to: 'sandipsahoo009@gmail.com'
+       mail to: 'devops@acme.com',
+    subject: "Job '${JOB_NAME}' (${BUILD_NUMBER}) is waiting for input",
+    body: "Please go to ${BUILD_URL} and verify the build"
     } 
     unsuccessful {
         // send the error mail
